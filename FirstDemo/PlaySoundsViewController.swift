@@ -50,6 +50,7 @@ class PlaySoundsViewController: UIViewController {
         Click button to play audio like a chipmunk
     */
     @IBAction func playChipmunkAudio(sender: UIButton) {
+        //make it constant
         playAudioWithVariablePitch(1000)
     }
     
@@ -62,14 +63,12 @@ class PlaySoundsViewController: UIViewController {
     
     /**
         Playing audio with the given pitch
-        Reference: http://stackoverflow.com/questions/25333140/swift-using-sound-effects-with-audioengine
     
         :param: The pitch level for playing an audio
     */
     func playAudioWithVariablePitch(pitch: Float){
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        
+        stopAudio()//Stops all the audio that is currently playing
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -91,6 +90,15 @@ class PlaySoundsViewController: UIViewController {
         The stop button. Click to stop playing audio
     */
     @IBAction func stopPlayingAudio(sender: UIButton) {
+        stopAudio()
+    }
+    
+    /**
+        By calling this function, it stops all the audio that is currently playing
+    */
+    func stopAudio(){
+        audioEngine.stop()
+        audioEngine.reset()
         audioPlayer.stop()
     }
     
@@ -105,20 +113,5 @@ class PlaySoundsViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

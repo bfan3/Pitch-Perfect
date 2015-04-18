@@ -67,9 +67,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
 
         if(flag){
-            recordedAudio = RecordedAudio()
-            recordedAudio.filePathUrl = recorder.url
-            recordedAudio.title = recorder.url.lastPathComponent
+            recordedAudio = RecordedAudio(filePathUrl:recorder.url, title: recorder.url.lastPathComponent)
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         }
         else{
@@ -78,7 +76,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             stopButton.hidden = true
         }
         
-        recordedAudio = RecordedAudio()
     }
     
     /**
@@ -101,16 +98,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
         recordButton.enabled = true
         recordingInProgress.hidden = false
         recordingInProgress.text = "Tap to record"
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

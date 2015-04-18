@@ -13,7 +13,6 @@
 		4A15DF7F1AC4E7A700AAFD29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A15DF7E1AC4E7A700AAFD29 /* Images.xcassets */; };
 		4A15DF821AC4E7A700AAFD29 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A15DF801AC4E7A700AAFD29 /* LaunchScreen.xib */; };
 		4A15DF8E1AC4E7A700AAFD29 /* FirstDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A15DF8D1AC4E7A700AAFD29 /* FirstDemoTests.swift */; };
-		4A5BCA2D1AD4EA9600CFC239 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4A5BCA2C1AD4EA9600CFC239 /* movie_quote.mp3 */; };
 		4A71DB8A1AD4C31F007539E0 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A71DB891AD4C31F007539E0 /* PlaySoundsViewController.swift */; };
 		4A7CD64D1AD63EFD00172650 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CD64C1AD63EFD00172650 /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
@@ -203,7 +202,6 @@
 			files = (
 				4A15DF7D1AC4E7A700AAFD29 /* Main.storyboard in Resources */,
 				4A15DF821AC4E7A700AAFD29 /* LaunchScreen.xib in Resources */,
-				4A5BCA2D1AD4EA9600CFC239 /* movie_quote.mp3 in Resources */,
 				4A15DF7F1AC4E7A700AAFD29 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
